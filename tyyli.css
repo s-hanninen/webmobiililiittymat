@@ -33,6 +33,7 @@ body::before {
 p {
     color:rgba(37, 37, 37, 0.648);
     font-weight: bold;
+    font-size: 125%;
     
 }
 
