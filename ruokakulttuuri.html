@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ruokakulttuuri</title>
+
+    <meta charset="utf-8">
+        
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="tyyli.css">
+
+</head>
+<body>
+
+  
+  <div class="container-fluid bg-info text-light header-container">
+    <div class="row align-items-center">
+        <div class="col-sm-9 p-3 bg-custom text-light">
+            <h1 class="text-center">Välkommen till Stockholm</h1>
+        </div>
+
+        <div class="col-sm-3 p-0 d-flex align-items-center justify-content-center">
+            <div class="header-image">
+                <img src="my-app\public\historic-center4-4553585_1280.jpg" alt="Kuva" class="responsive-img">
+            </div>
+        </div>
+    </div>
+</div>
+
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                      </div>
+                      <ul class="nav navbar-nav">
+                        <li><a href="index.html">Etusivu
+                            <span class="glyphicon glyphicon-home"></span>
+                        </a></li>
+                        <li><a href="turistinahtavyydet.html">Turistinähtävyydet
+                            <span class="glyphicon glyphicon-camera"></span>
+                        </a></li>
+                        <li><a href="historia.html">Historia
+                            <span class="glyphicon glyphicon-tower"></span>
+                        </a></li>
+                        <li class="active"><a href="#">Ruokakulttuuri
+                            <span class="glyphicon glyphicon-cutlery"></span></a></li>
+                            <li><a href="kartta.html">Kartta
+                              <span class="glyphicon glyphicon-globe"></span></a></li>
+                      </ul>
+                    </div>
+                  </nav>
+
+        <div class="row h-100">
+
+            <div class="col-sm-6 bg-secondary">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <div class="content" id="tukruoka">
+                    <script>
+                        function loadTextFile(url, elementId) {
+                          var xhr = new XMLHttpRequest();
+                          xhr.open("GET", url, true);
+                          xhr.onreadystatechange = function() {
+                            if (xhr.readyState === 4 && xhr.status === 200) {
+                              document.getElementById(elementId).innerHTML = xhr.responseText;
+                            }
+                          };
+                          xhr.send();
+                        }
+                    
+                        loadTextFile("my-app/public/tukruoka.txt", "tukruoka");
+                      </script>
+                  </div>
+        </div>
+    </div>
+            </div>
+
+  
+            <div class="col-sm-6 bg-light">
+              <div class="panel panel-default">
+                <div class="panel-body">
+
+                  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+
+                    <ol class="carousel-indicators">
+                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#myCarousel" data-slide-to="1"></li>
+                      <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                      <div class="item active">
+                        <img src="my-app\public\swedish-6053302_1280.jpg" alt="Köttbullar">
+                        <div class="carousel-caption">
+                            <h3>Ruotsalaiset lihapullat</h3>
+                        </div>
+                      </div>
+                  
+                      <div class="item">
+                        <img src="my-app\public\smorgastarta-2388075_1280.jpg" alt="Smörgastarta">
+                        <div class="carousel-caption">
+                            <h3>Voileipäkakku</h3>
+                        </div>
+                      </div>
+                  
+                      <div class="item">
+                        <img src="my-app\public\pancake-824610_1280.jpg" alt="Pannkaka">
+                        <div class="carousel-caption">
+                            <h3>Pannukakku marjoilla</h3>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

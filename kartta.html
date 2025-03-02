@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Etusivu</title>
+
+    <meta charset="utf-8">
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    
+    <script src="myScript.js"></script> 
+
+    <link rel="stylesheet" href="tyyli.css">
+
+</head>
+<body>
+
+    
+    <div class="container-fluid bg-info text-light header-container">
+        <div class="row align-items-center">
+
+            <div class="col-sm-9 p-3 bg-custom text-light">
+                <h1 class="text-center">Välkommen till Stockholm</h1>
+            </div>
+    
+            <div class="col-sm-3 p-0 d-flex align-items-center justify-content-center">
+                <div class="header-image">
+                    <img src="my-app\public\historic-center4-4553585_1280.jpg" alt="Kuva" class="responsive-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                      </div>
+                      <ul class="nav navbar-nav">
+                        <li><a href="index.html">Etusivu
+                            <span class="glyphicon glyphicon-home"></span>
+                        </a></li>
+                        <li><a href="turistinahtavyydet.html">Turistinähtävyydet
+                            <span class="glyphicon glyphicon-camera"></span>
+                        </a></li>
+                        <li><a href="historia.html">Historia
+                            <span class="glyphicon glyphicon-tower"></span>
+                        </a></li>
+                        <li><a href="ruokakulttuuri.html">Ruokakulttuuri
+                            <span class="glyphicon glyphicon-cutlery"></span></a></li>
+                            <li class="active"><a href="#">Kartta
+                                <span class="glyphicon glyphicon-globe"></span></a></li>
+                      </ul>
+                    </div>
+                  </nav>
+
+
+                  <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 bg-secondary">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <p>Alla on Tukholman kartta suurikokoisena. Selaa karttaa 
+                                    pitämällä hiiren oikeaa tai vasenta painiketta alhaalla 
+                                    ja vetämällä karttaa haluamaasi suuntaan. Zoomaa karttaa 
+                                    vierittämällä hiiren rullaa. Voit zoomata myös napsauttamalla  
+                                    kartan vasemmassa yläkulmassa olevia painikkeita.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  
+
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2 bg-secondary">
+                                <div class="panel panel-default">
+                                    <div class="panel-body text-center">
+                                        <div id="mapid" style="height: 400px;"></div>
+                                        <script>
+                                            var map = L.map('mapid').setView([59.334591, 18.063240], 13);
+                
+                                            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                                            }).addTo(map);
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                  </div>
+
+ 
+                </body>
+
+                </html>

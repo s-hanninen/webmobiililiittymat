@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Historia</title>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="tyyli.css">
+
+</head>
+<body>
+
+    
+    <div class="container-fluid bg-info text-light header-container">
+        <div class="row align-items-center">
+
+            <div class="col-sm-9 p-3 bg-custom text-light">
+                <h1 class="text-center">Välkommen till Stockholm</h1>
+            </div>
+    
+
+            <div class="col-sm-3 p-0 d-flex align-items-center justify-content-center">
+                <div class="header-image">
+                    <img src="my-app\public\historic-center4-4553585_1280.jpg" alt="Kuva" class="responsive-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                      </div>
+                      <ul class="nav navbar-nav">
+                        <li><a href="index.html">Etusivu
+                            <span class="glyphicon glyphicon-home"></span>
+                        </a></li>
+                        <li><a href="turistinahtavyydet.html">Turistinähtävyydet
+                            <span class="glyphicon glyphicon-camera"></span>
+                        </a></li>
+                        <li class="active"><a href="#">Historia
+                            <span class="glyphicon glyphicon-tower"></span>
+                        </a></li>
+                        <li><a href="ruokakulttuuri.html">Ruokakulttuuri
+                            <span class="glyphicon glyphicon-cutlery"></span></a></li>
+                            <li><a href="kartta.html">Kartta
+                                <span class="glyphicon glyphicon-globe"></span></a></li>
+                      </ul>
+                    </div>
+                  </nav>
+
+
+
+        <div class="row h-100">
+
+
+            <div class="col-sm-4 bg-secondary">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="content" id="tukhistoria1">
+                            <script>
+                                function loadTextFile(url, elementId) {
+                                  var xhr = new XMLHttpRequest();
+                                  xhr.open("GET", url, true);
+                                  xhr.onreadystatechange = function() {
+                                    if (xhr.readyState === 4 && xhr.status === 200) {
+                                      document.getElementById(elementId).innerHTML = xhr.responseText;
+                                    }
+                                  };
+                                  xhr.send();
+                                }
+                            
+                                loadTextFile("my-app/public/tukhistoria1.txt", "tukhistoria1");
+                              </script>
+                          </div>
+            </div>
+        </div>
+            </div>
+
+            <div class="col-sm-4 bg-secondary">
+        <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="content" id="tukhistoria2">
+                            <script>
+
+                                function loadTextFile(url, elementId) {
+                                  var xhr = new XMLHttpRequest();
+                                  xhr.open("GET", url, true);
+                                  xhr.onreadystatechange = function() {
+                                    if (xhr.readyState === 4 && xhr.status === 200) {
+                                      document.getElementById(elementId).innerHTML = xhr.responseText;
+                                    }
+                                  };
+                                  xhr.send();
+                                }
+                            
+                                loadTextFile("my-app/public/tukhistoria2.txt", "tukhistoria2");
+                              </script>
+                          </div>
+            </div>
+        </div>
+            </div>
+
+
+            <div class="col-sm-4 bg-light">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <img class="img-responsive img-rounded" 
+                    src="my-app\public\stockholm-5018149_1920.jpg" 
+                    alt="Kuva">
+                        
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

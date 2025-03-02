@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Etusivu</title>
+
+    <meta charset="utf-8">
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="myScript.js"></script> 
+
+    <link rel="stylesheet" href="tyyli.css">
+
+</head>
+<body>
+
+    <div class="container-fluid bg-info text-light header-container">
+        <div class="row align-items-center">
+
+            <div class="col-sm-9 p-3 bg-custom text-light">
+                <h1 class="text-center">Välkommen till Stockholm</h1>
+            </div>
+    
+            <div class="col-sm-3 p-0 d-flex align-items-center justify-content-center">
+                <div class="header-image">
+                    <img src="my-app\public\historic-center4-4553585_1280.jpg" alt="Kuva" class="responsive-img">
+                </div>
+            </div>
+        </div>
+    </div>
+  
+                  
+
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                      </div>
+                      <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Etusivu
+                            <span class="glyphicon glyphicon-home"></span>
+                        </a></li>
+                        <li><a href="turistinahtavyydet.html">Turistinähtävyydet
+                            <span class="glyphicon glyphicon-camera"></span>
+                        </a></li>
+                        <li><a href="historia.html">Historia
+                            <span class="glyphicon glyphicon-tower"></span>
+                        </a></li>
+                        <li><a href="ruokakulttuuri.html">Ruokakulttuuri
+                            <span class="glyphicon glyphicon-cutlery"></span></a></li>
+                            <li><a href="kartta.html">Kartta
+                                <span class="glyphicon glyphicon-globe"></span></a></li>
+                      </ul>
+                    </div>
+                  </nav>
+
+
+        <div class="container-fluid">
+        <div class="row h-100">
+
+<div class="col-sm-4 bg-secondary">
+    <div class="panel panel-default">
+      <div class="panel-body">
+
+        <a id="weatherWidgetLink" class="weatherwidget-io" href="https://forecast7.com/en/59d3318d07/stockholm/" 
+           data-label_1="STOCKHOLM" data-label_2="WEATHER" data-theme="original" data-basecolor="#ead48e" 
+           data-textcolor="#494949" data-highcolor="#7a0000" data-lowcolor="#314767" data-mooncolor="#979797" 
+           data-cloudcolor="#ffb700" data-cloudfill="#ffb700" data-raincolor="#0069ff" data-snowcolor="#35a0ff">
+           STOCKHOLM WEATHER
+        </a>
+        <script>
+          !function(d,s,id){
+            var js, fjs=d.getElementsByTagName(s)[0];
+            if(!d.getElementById(id)){
+              js=d.createElement(s); js.id=id;
+              js.src='https://weatherwidget.io/js/widget.min.js';
+              fjs.parentNode.insertBefore(js,fjs);
+            }
+          }(document,'script','weatherwidget-io-js');
+        </script>
+        <p>Klikkaamalla kuvaa pääset forecast7.com -sivulle josta voit lukea tarkemman säätiedotteen</p>
+      </div>
+    </div>
+  </div>
+  
+
+            <div class="col-sm-4 bg-light">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3>Tervetuloa tutustumaan Tukholmaan</h3>
+                        <p>Tältä sivulta löydät tietoa ja kuvia Tukholmasta. Tukholma on Ruotsin 
+                            pääkaupunki ja suosittu matkakohde. Tällä sivustolla on 
+                            esitelty Tukholman nähtävyyksiä, historiaa, sekä ruokakulttuuria. 
+                            Lisäksi löydät etusivulta (tältä sivulta) Tukholman tämänhetkisen sään 
+                            sekä sääennusteen seuraaville päiville. Lisäksi sivustolla on 
+                            interaktiivinen Leaflet-karttasovellus, jota vierittämällä voit selata 
+                            Tukholman karttaa.
+                        </p>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-sm-4 bg-light">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <a href="kartta.html">
+                            <img class=" img-responsive img-rounded" 
+                    src="my-app\public\stockholm-4736962_1280.jpg" 
+                    alt="Kuva"></a>
+                    <p>Klikkaa kuvaa, niin pääset kartta-osioon</p>
+                    </div>
+                  </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 bg-secondary">
+
+                <div class="panel panel-default">
+                    <div class="panel-body text-center">
+                        <img id="large-image" class="img-responsive img-rounded" src="my-app\public\stockholm-index-cropped-4874814_1280.jpg" alt="Kuva">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4 d-flex justify-content-center">
+                <div class="panel panel-default">
+                    <div class="panel-body text-center">
+                        <p>Yhteystiedot:
+
+                            Tiina Tukholmalainen,
+                            +000 12345678,
+                            tukholmalainen@sposti.fi
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

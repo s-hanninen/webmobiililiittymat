@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Turistinähtävyydet</title>
+
+    <meta charset="utf-8">
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    
+
+    <link rel="stylesheet" href="tyyli.css">
+
+</head>
+<body>
+
+    
+    <div class="container-fluid bg-info text-light header-container">
+        <div class="row align-items-center">
+
+            <div class="col-sm-9 p-3 bg-custom text-light">
+                <h1 class="text-center">Välkommen till Stockholm</h1>
+            </div>
+    
+            <div class="col-sm-3 p-0 d-flex align-items-center justify-content-center">
+                <div class="header-image">
+                    <img src="my-app\public\historic-center4-4553585_1280.jpg" alt="Kuva" class="responsive-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                          <div class="navbar-header"> 
+                          </div>
+                          <ul class="nav navbar-nav">
+                            <li><a href="index.html">Etusivu
+                                <span class="glyphicon glyphicon-home"></span>
+                            </a></li>
+                            <li class="active"><a href="#">Turistinähtävyydet
+                                <span class="glyphicon glyphicon-camera"></span>
+                            </a></li>
+                            <li><a href="historia.html">Historia
+                                <span class="glyphicon glyphicon-tower"></span>
+                            </a></li>
+                            <li><a href="ruokakulttuuri.html">Ruokakulttuuri
+                                <span class="glyphicon glyphicon-cutlery"></span></a></li>
+                                <li><a href="kartta.html">Kartta
+                                    <span class="glyphicon glyphicon-globe"></span></a></li>
+                          </ul>
+                        </div>
+                      </nav>
+    
+            <div class="row h-100">
+
+                <div class="col-sm-4 bg-secondary">
+                    <div class="panel panel-default">
+                        <div class="panel-body text-center">
+                            <div id="mapid" style="height: 400px;"></div>
+                            <script>
+                                var map = L.map('mapid').setView([59.334591, 18.063240], 13);
+                                var marker = L.marker([59.325695, 18.071869]).addTo(map);
+                                marker.bindPopup("<b>Vanhakaupunki</b>").openPopup();
+
+                                var marker2 = L.marker([59.322665376, 18.0696663]).addTo(map);
+                                marker2.bindPopup("<b>Kuninkaan linna</b>").openPopup();
+
+                                var marker3 = L.marker([59.32794, 18.09139]).addTo(map);
+                                marker3.bindPopup("<b>Vasa-museo</b>").openPopup();
+
+                                var marker4 = L.marker([59.32166538, 18.1166662]).addTo(map);
+                                marker4.bindPopup("<b>Djurgårdenin saari</b>").openPopup();
+
+                                var marker5 = L.marker([59.322332044, 18.102166258]).addTo(map);
+                                marker5.bindPopup("<b>Skansen</b>").openPopup();
+
+                                var marker6 = L.marker([59.3179, 18.0857]).addTo(map);
+                                marker6.bindPopup("<b>ABBA-museo</b>").openPopup();
+
+                                var marker7 = L.marker([59.32249871, 18.083499666]).addTo(map);
+                                marker7.bindPopup("<b>Moderna Museet</b>").openPopup();
+
+                                var marker8 = L.marker([59.317337064, 18.08416633]).addTo(map);
+                                marker8.bindPopup("<b>Fotografiska</b>").openPopup();
+
+                                var marker9 = L.marker([59.324680, 18.064577]).addTo(map);
+                                marker9.bindPopup("<b>Riddarholmenin kirkko</b>").openPopup();
+
+                                var marker10 = L.marker([59.320665384, 18.091332968]).addTo(map);
+                                marker10.bindPopup("<b>Gröna Lund</b>").openPopup();
+
+                                var marker11 = L.marker([59.318665392, 18.070333052]).addTo(map);
+                                marker11.bindPopup("<b>Katarinahissen</b>").openPopup();
+    
+
+                                
+                                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                                }).addTo(map, marker, marker2, marker3, marker4, marker5, marker6, marker7, 
+                                    marker8, marker9, marker10, marker11);
+                                
+                            </script>
+                        </div>
+                      </div>
+                </div>
+    
+
+                <div class="col-sm-4 bg-secondary">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="content" id="tuknahtavyydet">
+                                <script>
+
+                                    function loadTextFile(url, elementId) {
+                                      var xhr = new XMLHttpRequest();
+                                      xhr.open("GET", url, true);
+                                      xhr.onreadystatechange = function() {
+                                        if (xhr.readyState === 4 && xhr.status === 200) {
+                                          document.getElementById(elementId).innerHTML = xhr.responseText;
+                                        }
+                                      };
+                                      xhr.send();
+                                    }
+                                
+                                    loadTextFile("my-app/public/tuknahtavyydet.txt", "tuknahtavyydet");
+                                  </script>
+                              </div>
+                              
+                        </div>
+                      </div>
+                </div>
+    
+                <div class="col-sm-4 bg-light">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                    <img class="img-responsive img-rounded" 
+                    src="my-app\public\historic-center-cropped-4553585_1280.jpg" 
+                    alt="Kuva">
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+<div class="row">
+
+    <div class="col-sm-4 bg-light">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="content" id="tuknahtavyydet2">
+                    <script>
+                        loadTextFile("my-app/public/tuknahtavyydet2.txt", "tuknahtavyydet2");
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4 bg-light">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="content" id="tuknahtavyydet3">
+                    <script>
+
+                        loadTextFile("my-app/public/tuknahtavyydet3.txt", "tuknahtavyydet3");
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-sm-4 bg-light">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="content" id="tuknahtavyydet4">
+                    <script>
+                        loadTextFile("my-app/public/tuknahtavyydet4.txt", "tuknahtavyydet4");
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
